@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 
 function App() {
   return (
-    <h1>Presupuesto</h1>
+    <Fragment>
+      <h1>Presupuesto</h1>
+    </Fragment>
   );
 }
 
