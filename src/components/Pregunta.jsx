@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import PropTypes from "prop-types";
 import Error from "./Error";
 
 const Pregunta = ({ setPresupuesto, setRestante, actualizarPregunta }) => {
@@ -33,7 +34,9 @@ const Pregunta = ({ setPresupuesto, setRestante, actualizarPregunta }) => {
         <Fragment>
             <h2>Ingresa tu presupuesto</h2>
 
-            {error ? <Error mensaje="El Presupuesto es Incorrecto" /> : null}
+            {error ? 
+                <Error mensaje="El Presupuesto es Incorrecto" /> 
+            : null}
 
             <form
                 onSubmit={agregarPresupuesto}
@@ -55,5 +58,11 @@ const Pregunta = ({ setPresupuesto, setRestante, actualizarPregunta }) => {
         </Fragment>
     );
 };
+
+Pregunta.propTypes = {
+    setPresupuesto: PropTypes.func.isRequired,
+    setRestante: PropTypes.func.isRequired,
+    actualizarPregunta: PropTypes.func.isRequired
+}
 
 export default Pregunta;
