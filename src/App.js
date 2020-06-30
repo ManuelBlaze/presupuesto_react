@@ -1,9 +1,20 @@
 import React, { Fragment, useState } from 'react';
+import Pregunta from "./components/Pregunta";
 
 function App() {
   return (
     <Fragment>
-      <h1>Presupuesto</h1>
+      <div className="container">
+        <header>
+          <h1>Gasto Semanal</h1>
+
+          <div className="contenido-principal contenido">
+            <Pregunta />
+          </div>
+        </header>
+
+
+      </div>
     </Fragment>
   );
 }
