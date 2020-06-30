@@ -1,21 +1,29 @@
-import React, { Fragment, useState } from 'react';
+import React, {  useState } from 'react';
 import Pregunta from "./components/Pregunta";
 
 function App() {
+
+  //definir el state
+  const [presupuesto, setPresupuesto] = useState(0);
+  const [restante, setRestante] = useState(0);
+
+
+
   return (
-    <Fragment>
-      <div className="container">
-        <header>
-          <h1>Gasto Semanal</h1>
+    <div className="container">
+      <header>
+        <h1>Gasto Semanal</h1>
 
-          <div className="contenido-principal contenido">
-            <Pregunta />
-          </div>
-        </header>
+        <div className="contenido-principal contenido">
+          <Pregunta 
+            setPresupuesto={setPresupuesto}
+            setRestante={setRestante}
+          />
+        </div>
+      </header>
 
-
-      </div>
-    </Fragment>
+    </div>
+    
   );
 }
 
